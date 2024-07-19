@@ -34,9 +34,9 @@ def get_rotation_matrix(pitch_, yaw_, roll_):
     # calculate the rotation matrix: vps @ rot
 
     # transform to radian
-    pitch = pitch_ / 180 * PI
-    yaw = yaw_ / 180 * PI
-    roll = roll_ / 180 * PI
+    pitch = torch.zeros_like(pitch_)
+    yaw = torch.zeros_like(yaw_)
+    roll = torch.zeros_like(roll_)
 
     device = pitch.device
 
